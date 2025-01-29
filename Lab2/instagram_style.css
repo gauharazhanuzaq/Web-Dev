@@ -1,0 +1,263 @@
+html * {
+    font-family: "Segoe UI", Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #fafafa;
+    width: 100%;
+    padding: 0;
+    display: block;
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+  }
+  
+  .left {
+    float: left;
+    width: 50%;
+  }
+  
+  .right {
+    float: right;
+    width: 50%;
+  }
+  
+  .login-box {
+    background-color: #ffffff;
+    width: 350px;
+    height: 400px;
+    border: 1px solid #dbdbdb;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 40px;
+  }
+  
+  .logo-box {
+    margin: 4px;
+    display: inline-block;
+  }
+  
+  .instagram-logo {
+    width: 170px;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-bottom: 35px;
+  }
+  
+  input {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    width: 250px;
+    height: 25px;
+    padding: 7px;
+    margin: 0 40px 6px;
+    border: 1px solid #dbdbdb;
+    border-radius: 2px;
+    background-color: #fafafa;
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  
+  button {
+    background-color:  #0095f6;
+    color: white;
+    text-align: center;
+    width: 265px;
+    height: 30px;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    margin-top: 7px;
+    margin-bottom: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .sign-up-box {
+    background-color: #ffffff;
+    width: 350px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #dbdbdb;
+    margin: 0 0 10px;
+  }
+  
+  .sign-up {
+    color:#0095f6 ;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 18.5px;
+  }
+  
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.divider .line {
+    height: 1px;
+    background-color: #dbdbdb;
+    flex: 1;
+}
+
+.divider span {
+    margin: 0 10px;
+    font-size: 12px;
+    color: #666666;
+    font-weight: 600;
+}
+
+.facebook-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0095f6;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+.facebook-login i {
+    margin-right: 8px;
+    font-size: 18px;
+    color: #0095f6;
+}
+.forgot-password {
+    display: block;
+    color: #00376b;
+    font-size: 12px;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+  .app-install {
+    text-align: center;
+    width: 350px;
+  }
+  
+  h4 {
+    font-weight: 400;
+    font-size: 14px;
+    margin-right: 5px;
+  }
+  
+  .google {
+    width: 125px;
+    cursor: pointer;
+  }
+  
+  .microsoft {
+    width: 100px;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
+  #footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    margin-top: auto;
+  }
+  
+  .footer-link-container {
+    text-align: center;
+  }
+  
+  .footer-link {
+    color: #8e8e8e;
+    font-weight: 400;
+    font-size: 12px;
+    margin: 0px 5px 0px 5px;
+    margin-bottom: 3px;
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-details {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  p {
+    color: #8e8e8e;
+    font-weight: 400;
+    font-size: 12px;
+  }
+  
+  .dropdown {
+    display: inline-block;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    color: #8e8e8e;
+    font-weight: 400;
+    font-size: 12px;
+    margin: 12px 5px 0px 0px;
+  }
+  
+  .drop-btn {
+    background: transparent;
+    color: #8e8e8e;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+  }  
+  .phone-container {
+    margin: auto;
+    width: 50%;
+  }
+  
+  .ig-phone {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 580px;
+    position: absolute;
+    left: 340px;
+    margin-top: 40px;
+  }
+  
+  .screenshot {
+    background-size: contain;
+    height: 490px;
+    position: absolute;
+    left: 484px;
+    margin-top: 65px;
+    border-radius: 10px;
+  }
+
+
+@media (max-width: 768px) {
+  .left{ 
+      display: none; 
+  }
+  .right{
+    width: 70%;
+    justify-content: center;
+  }
+  #footer {
+    padding: 10px 0; 
+    font-size: 12px;
+}
+
+.footer-link {
+    margin-bottom: 3px;
+}
+}
+
+
+  
