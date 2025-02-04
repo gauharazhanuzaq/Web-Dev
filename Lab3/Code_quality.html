@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+  <p>Before the script...</p>
+
+<script>
+//Bad style
+function pow(x, n) {
+    let result = 1;
+  
+    for (let i = 0; i < n; i++) {
+      result *= x;
+    }
+  
+    return result;
+  }
+  
+  let x = prompt("x?", "");
+  let n = prompt("n?", "");
+  
+  if (n <= 0) {
+    alert(`Power ${n} is not supported,
+      please enter an integer number greater than zero`);
+  } else {
+    alert( pow(x, n) );
+  }
+//bad comments
+// This code will do this thing (...) and that thing (...)
+// ...and who knows what else...
+very;
+complex;
+code;
+//good comments
+/**
+ * Returns x raised to the n-th power.
+ *
+ * @param {number} x The number to raise.
+ * @param {number} n The power, must be a natural number.
+ * @return {number} x raised to the n-th power.
+ */
+ function pow(x, n) {
+  
+}
+//ninja code
+// taken from a well-known javascript library
+i = i ? i < 0 ? Math.max(0, len + i) : i : 0;
+//Automated testing with Mocha
+describe("pow", function() {
+
+function makeTest(x) {
+  let expected = x * x * x;
+  it(`${x} in the power 3 is ${expected}`, function() {
+    assert.equal(pow(x, 3), expected);
+  });
+}
+
+for (let x = 1; x <= 5; x++) {
+  makeTest(x);
+}
+
+});
+//Polyfills and transpilers
+// before running the transpiler
+height = height ?? 100;
+
+// after running the transpiler
+height = (height !== undefined && height !== null) ? height : 100;
+
+if (!Math.trunc) { // if no such function
+  // implement it
+  Math.trunc = function(number) {
+    // Math.ceil and Math.floor exist even in ancient JavaScript engines
+    // they are covered later in the tutorial
+    return number < 0 ? Math.ceil(number) : Math.floor(number);
+  };
+}
+</script>
+
+<p>...After the script.</p>
+
+</body>
+
+</html>
