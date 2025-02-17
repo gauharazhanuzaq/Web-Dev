@@ -1,0 +1,46 @@
+<div class="category-list">
+  <button *ngFor="let category of categories" (click)="setSelectedCategory(category)">
+    {{ category }}
+  </button>
+</div>
+
+<div *ngIf="selectedCategory">
+  <h2>{{ selectedCategory }}</h2>
+
+  <div *ngIf="productsByCategory[selectedCategory]?.length > 0">
+    <div *ngFor="let product of productsByCategory[selectedCategory]" class="product-card">
+      <img [src]="product.photoUrl" alt="{{ product.name }}" class="product-image" />
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+      <p>
+        <i class="fas fa-star"></i> {{ product.rating }} / 5
+      </p>
+      <button class="like-button" (click)="increaseLikes(product)">
+        <i class="fas fa-thumbs-up"></i> Like ({{ product.likes }})
+      </button>
+      <button class="remove-button" (click)="removeProduct(product)">
+        <i class="fas fa-trash"></i> Remove
+      </button>
+      <a [href]="product.caspiLink" target="_blank" class="buy-button">
+        <i class="fas fa-shopping-cart"></i> Buy on Kaspi
+      </a>
+
+      <div class="share-buttons">
+        <a [href]="'https://wa.me/?text=' + product.name + '%20' + product.description + '%20' + product.caspiLink" target="_blank">
+          <i class="fab fa-whatsapp whatsapp-icon"></i> Share on WhatsApp
+        </a>
+        <a [href]="'https://t.me/share/url?url=' + product.caspiLink + '&text=' + product.name" target="_blank">
+          <i class="fab fa-telegram telegram-icon"></i> Share on Telegram
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="productsByCategory[selectedCategory]?.length === 0">
+    <p>No products available in this category.</p>
+  </div>
+</div>
+
+<div *ngIf="!selectedCategory">
+  <p>Please select a category to view products.</p>
+</div>
